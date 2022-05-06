@@ -1,0 +1,23 @@
+<template>
+    
+    <!-- start admin-container -->
+    <div class="admin-container">
+        <slot></slot>
+    </div>
+    <!-- end admin-container-->
+
+</template>
+
+<script>
+export default {
+     name: 'AdminContainer',
+}
+</script>
+
+<style lang="scss" scoped>
+   .admin-container{
+       padding: 26px;
+       background: #F0F2F5;
+       height: calc(100vh - 84px);
+   }
+</style>
