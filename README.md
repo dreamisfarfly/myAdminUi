@@ -5,7 +5,7 @@
 git clone https://github.com/dreamisfarfly/myAdminUi.git
 
 # 进入项目目录
-cd ruoyi-ui
+cd myAdminUi
 
 # 安装依赖
 npm install
