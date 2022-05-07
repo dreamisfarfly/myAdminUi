@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
    .admin-container{
-       padding: 26px;
+       padding: 20px 20px;
        background: #F0F2F5;
        min-height: calc(100vh - 84px);
        max-height: auto;
