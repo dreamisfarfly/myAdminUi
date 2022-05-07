@@ -380,6 +380,7 @@
                 v-model="form.postIds"
                 multiple
                 placeholder="请选择岗位"
+                @change="$forceUpdate()"
               >
                 <el-option
                   v-for="item in postOptions"
@@ -397,6 +398,7 @@
                 v-model="form.roleIds"
                 multiple
                 placeholder="请选择角色"
+                @change="$forceUpdate()"
               >
                 <el-option
                   v-for="item in roleOptions"
@@ -753,7 +755,7 @@ export default {
       this.$refs["form"].validate((valid) => {
         if (valid) {
           if (this.form.userId != undefined) {
-            updateUser(this.form).then((response) => {
+            updateUser(this.form.userId, this.form).then((response) => {
               this.$modal.msgSuccess("修改成功");
               this.open = false;
               this.getList();

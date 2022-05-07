@@ -28,9 +28,9 @@ export function addUser(data) {
 }
 
 // 修改用户
-export function updateUser(data) {
+export function updateUser(userId, data) {
   return request({
-    url: '/system/user',
+    url: '/system/user/'+ userId,
     method: 'put',
     data: data
   })
