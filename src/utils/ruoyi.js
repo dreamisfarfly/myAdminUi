@@ -128,7 +128,7 @@ export function parseStrEmpty(str) {
   if (!str || str == "undefined" || str == "null") {
     return "";
   }
-  return str;
+  return '/'+str;
 }
 
 // 数据合并

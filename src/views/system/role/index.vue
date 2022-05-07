@@ -67,7 +67,7 @@
       </el-form>
     </adminCard>
 
-    <adminCard style="margin-top:40px">
+    <adminCard style="margin-top: 40px">
       <el-row :gutter="10" class="mb8">
         <el-col :span="1.5">
           <el-button
@@ -115,6 +115,7 @@
             >导出</el-button
           >
         </el-col>
+        <right-toolbar @queryTable="getList"></right-toolbar>
       </el-row>
 
       <el-table

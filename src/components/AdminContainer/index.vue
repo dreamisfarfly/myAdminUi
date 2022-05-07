@@ -18,6 +18,7 @@ export default {
    .admin-container{
        padding: 26px;
        background: #F0F2F5;
-       height: calc(100vh - 84px);
+       min-height: calc(100vh - 84px);
+       max-height: auto;
    }
 </style>
