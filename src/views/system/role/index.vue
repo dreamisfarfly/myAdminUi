@@ -13,7 +13,7 @@
             v-model="queryParams.roleName"
             placeholder="请输入角色名称"
             clearable
-            style="width: 240px"
+            style="width: 200px"
             @keyup.enter.native="handleQuery"
           />
         </el-form-item>
@@ -22,7 +22,7 @@
             v-model="queryParams.roleKey"
             placeholder="请输入权限字符"
             clearable
-            style="width: 240px"
+            style="width: 200px"
             @keyup.enter.native="handleQuery"
           />
         </el-form-item>
@@ -31,7 +31,7 @@
             v-model="queryParams.status"
             placeholder="角色状态"
             clearable
-            style="width: 240px"
+            style="width: 200px"
           >
             <el-option
               v-for="dict in dict.type.sys_normal_disable"
@@ -44,7 +44,7 @@
         <el-form-item label="创建时间">
           <el-date-picker
             v-model="dateRange"
-            style="width: 240px"
+            style="width: 220px"
             value-format="yyyy-MM-dd"
             type="daterange"
             range-separator="-"
@@ -67,7 +67,7 @@
       </el-form>
     </adminCard>
 
-    <adminCard style="margin-top: 40px">
+    <adminCard>
       <el-row :gutter="10" class="mb8">
         <el-col :span="1.5">
           <el-button

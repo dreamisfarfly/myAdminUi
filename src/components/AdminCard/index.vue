@@ -19,6 +19,7 @@ export default {
        background: #FFFFFF;
        border-radius: 10px;
        padding: 22px;
+       margin-bottom: 20px;
        .admin-card-header{
            display: flex;
            .admin-card-header-search{

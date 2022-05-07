@@ -10,6 +10,7 @@
       >
         <el-form-item label="菜单名称" prop="menuName">
           <el-input
+            style="width:200px"
             v-model="queryParams.menuName"
             placeholder="请输入菜单名称"
             clearable
@@ -18,6 +19,7 @@
         </el-form-item>
         <el-form-item label="状态" prop="status">
           <el-select
+            style="width:200px"
             v-model="queryParams.status"
             placeholder="菜单状态"
             clearable
@@ -45,7 +47,7 @@
       </el-form>
     </adminCard>
 
-    <adminCard style="margin-top:40px">
+    <adminCard>
       <el-row :gutter="10" class="mb8">
         <el-col :span="1.5">
           <el-button
