@@ -104,7 +104,7 @@
             >删除</el-button
           >
         </el-col>
-        <el-col :span="1.5">
+        <!-- <el-col :span="1.5">
           <el-button
             type="warning"
             plain
@@ -114,7 +114,7 @@
             v-hasPermi="['system:role:export']"
             >导出</el-button
           >
-        </el-col>
+        </el-col> -->
         <right-toolbar @queryTable="getList"></right-toolbar>
       </el-row>
 
@@ -225,7 +225,7 @@
         <el-form-item prop="roleKey">
           <span slot="label">
             <el-tooltip
-              content="控制器中定义的权限字符，如：@PreAuthorize(`@ss.hasRole('admin')`)"
+              content="控制器中定义的权限字符，如：Authentication::hasPermit('system:user:edit')"
               placement="top"
             >
               <i class="el-icon-question"></i>
@@ -685,7 +685,7 @@ export default {
         if (valid) {
           if (this.form.roleId != undefined) {
             this.form.menuIds = this.getMenuAllCheckedKeys();
-            updateRole(this.form).then((response) => {
+            updateRole(this.form.roleId, this.form).then((response) => {
               this.$modal.msgSuccess("修改成功");
               this.open = false;
               this.getList();
