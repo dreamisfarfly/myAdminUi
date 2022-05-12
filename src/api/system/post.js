@@ -27,9 +27,9 @@ export function addPost(data) {
 }
 
 // 修改岗位
-export function updatePost(data) {
+export function updatePost(id,data) {
   return request({
-    url: '/system/post',
+    url: '/system/post/'+id,
     method: 'put',
     data: data
   })

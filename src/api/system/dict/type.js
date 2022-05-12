@@ -27,9 +27,9 @@ export function addType(data) {
 }
 
 // 修改字典类型
-export function updateType(data) {
+export function updateType(id, data) {
   return request({
-    url: '/system/dict/type',
+    url: '/system/dict/type/'+id,
     method: 'put',
     data: data
   })

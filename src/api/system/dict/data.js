@@ -35,9 +35,9 @@ export function addData(data) {
 }
 
 // 修改字典数据
-export function updateData(data) {
+export function updateData(id,data) {
   return request({
-    url: '/system/dict/data',
+    url: '/system/dict/data/'+id,
     method: 'put',
     data: data
   })

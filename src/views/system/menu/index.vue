@@ -532,7 +532,7 @@ export default {
       this.$refs["form"].validate((valid) => {
         if (valid) {
           if (this.form.menuId != undefined) {
-            updateMenu(this.form).then((response) => {
+            updateMenu(this.form.menuId, this.form).then((response) => {
               this.$modal.msgSuccess("修改成功");
               this.open = false;
               this.getList();

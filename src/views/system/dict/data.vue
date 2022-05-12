@@ -191,7 +191,7 @@
 
 <script>
 import { listData, getData, delData, addData, updateData } from "@/api/system/dict/data";
-import { listType, getType } from "@/api/system/dict/type";
+import { optionselect, getType } from "@/api/system/dict/type";
 
 export default {
   name: "Data",
@@ -287,8 +287,8 @@ export default {
     },
     /** 查询字典类型列表 */
     getTypeList() {
-      listType().then(response => {
-        this.typeOptions = response.rows;
+      optionselect().then(response => {
+        this.typeOptions = response.data;
       });
     },
     /** 查询字典数据列表 */
@@ -363,7 +363,7 @@ export default {
       this.$refs["form"].validate(valid => {
         if (valid) {
           if (this.form.dictCode != undefined) {
-            updateData(this.form).then(response => {
+            updateData(this.form.dictCode, this.form).then(response => {
               this.$modal.msgSuccess("修改成功");
               this.open = false;
               this.getList();
